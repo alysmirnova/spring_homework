@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;INIT-RUNSCRIPT FROM 'classpath:schema.url';DATABASE_TO_UPPER=false
+    username: tester
+    password:
+    sql-script-encoding: UTF-8
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format-sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+        hbm2ddl:
+          auto: none
+      javax:
+        persistence:
+          validation:
+            mode: none
